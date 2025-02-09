@@ -6,4 +6,68 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 1px;
+    border: 2px solid #333;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.cell.wall {
+    background-color: #000;
+}
+
+.cell.start {
+    background-color: green;
+}
+
+.cell.end {
+    background-color: red;
+}
+
+.cell.explored {
+    background-color: lightgray;
+}
+
+.cell.path {
+    background-color: blue;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }

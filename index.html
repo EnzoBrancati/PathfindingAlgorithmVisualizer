@@ -6,13 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pathfinding Algorithm Visualizer</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
 </head>
 
 <body>
-    <h1>Pathfinding Algorithm Visualizer</h1>
 
     <div id="root"></div>
+
+    <div class="controls">
+        <label for="algorithm">Select algorithm:</label>
+        <select id="algorithm">
+            <option value="dijkstra">Dijkstra</option>
+            <option value="astar">A*</option>
+        </select>
+        <br>
+        <button id="startBtn">Start pathfinding</button>
+        <br>
+        <label for="startNode">Start node:</label>
+        <input type="text" id="startNode" value="0,0">
+        <label for="endNode">Target node:</label>
+        <input type="text" id="endNode" value="9,9">
+
+        <!-- Aggiungi i pulsanti per la velocità -->
+        <div id="speedControl">
+            <button id="slowBtn">Slow</button>
+            <button id="mediumBtn">Medium</button>
+            <button id="fastBtn">Fast</button>
+        </div>
+
+    </div>
+
+
 </body>
 
 </html>
