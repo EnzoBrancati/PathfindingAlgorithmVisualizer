@@ -1,5 +1,6 @@
 import { createGrid, toggleWall, highlightNode } from "./grid.js";
 import { dijkstra } from "../utils/algorithms/dijkstra.js";
+import { aStar } from "../utils/algorithms/astar.js";
 import { setSpeed } from "../state/state.js";
 
 export function setupControlEvents(gridContainer, gridSize, grid, start, end, path) {
@@ -26,7 +27,7 @@ export function setupControlEvents(gridContainer, gridSize, grid, start, end, pa
                 break;
 
             case "astar":
-                //aStar(grid, start, end);
+                aStar(grid, start, end);
                 break;
 
             default:
